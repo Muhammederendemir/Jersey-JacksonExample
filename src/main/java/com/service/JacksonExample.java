@@ -15,7 +15,7 @@ public class JacksonExample {
         person.setId(164);
         person.setName("Muhammed Eren");
         person.setSurname("Demir");
-        return person;
+        return person; 
 
     }
 }

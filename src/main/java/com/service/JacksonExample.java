@@ -1,14 +1,14 @@
 package com.service;
 
 import com.model.Person;
-import com.model.UserInput;
+import com.model.User;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/jackson")
 public class JacksonExample {
     @POST
-    public void createCustomer(@BeanParam UserInput user){
+    public void createCustomer(@BeanParam User user){
 
         System.out.println(user.toString());
     }

@@ -4,7 +4,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.QueryParam;
 
-public class UserInput {
+public class User {
     @FormParam("name")
     private String name;
 

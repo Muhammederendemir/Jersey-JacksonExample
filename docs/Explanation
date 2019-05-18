@@ -75,3 +75,42 @@
 	     -  @QueryParam anotasyonu :Parametrelerinizi “&” ve “?” kullanarak url içerisinde belirtiyoruz.
 
 	     -  @Consumes birden fazla farklı formatta(json,xml,text..) veriyi alıp java nesnesine çevirebiliriz.
+
+
+	                                      -- -- --      JACKSON ANONTİON      -- -- --
+
+               ------>    @JsonIgnore   <------
+
+             @JsonIgnore ek açıklaması, seri hale getirme ve seri kaldırma sırasında Jackson tarafından göz ardı edilecek
+            bir POJO'nun alanını işaretler. Jackson, hem JSON serileştirme hem de seri hale getirme alanını dikkate almaz.
+
+               ------->   @JsonIgnoreProperties   <-----
+
+             @JsonIgnoreProperties ek açıklaması seri düzeyinde ve seri hale getirme sırasındaki alanları yoksaymak için
+            sınıf düzeyinde kullanılır. Bu açıklamada belirtilen özellikler JSON içeriğiyle eşlenmeyecektir.
+
+
+               ------->   @JsonIgnoreType     <------
+
+             @JsonIgnoreType ek açıklaması, serileştirme ve seri kaldırma sırasında yok sayılacak bir sınıfı işaretlemek
+            için kullanılır. JSON oluşturulurken ve JSON okunurken yok sayılacak sınıfın tüm özelliklerini işaretler.
+
+               -------->   @JsonAutoDetect   <--------
+
+             @JsonAutoDetect ek açıklaması, Jackson'a seri hale getirme ve seri kaldırma sırasında bir sınıfın özelliklerini
+            görünürlüğünü geçersiz kılmalarını bildirmek için sınıf düzeyinde kullanılır. Görünürlüğü aşağıdaki unsurlarla ayarlayabilirsiniz:
+
+                - creatorVisibility
+                - fieldVisibility
+                - getterVisibility
+                - setterVisibility
+                - isGetterVisibility
+
+              JsonAutoDetect sınıfı, Java sınıfı görünürlük düzeylerine benzer genel statik sabitleri tanımlar. Onlar:
+
+                    ANY
+                    DEFAULT
+                    NON_PRIVATE
+                    NONE
+                    PROTECTED_AND_PRIVATE
+                    PUBLIC_ONLY
